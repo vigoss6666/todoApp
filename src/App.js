@@ -7,6 +7,10 @@ function App(props) {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
+<<<<<<< HEAD
+=======
+  console.log("namer is the best gamer");
+>>>>>>> main
 
   const _deleteTodo = (id) => {
     const copy = todoList.concat();
@@ -20,12 +24,22 @@ function App(props) {
     let todoIndex = copy.findIndex((val) => val.id === id);
     copy[todoIndex].checked = true;
     setTodoList(copy);
+<<<<<<< HEAD
+=======
+
+    console.log("added a few changes to main");
+>>>>>>> main
   };
 
   const _addTodo = () => {
     if (input.length < 1) {
       setError(true);
       return;
+<<<<<<< HEAD
+=======
+
+      console.log("added another");
+>>>>>>> main
     }
     setError(false);
     let copy = todoList.concat();
@@ -36,6 +50,10 @@ function App(props) {
     });
     setTodoList(copy);
   };
+<<<<<<< HEAD
+=======
+  console.log("latest changes");
+>>>>>>> main
 
   return (
     <div style={styles.mainHeader}>
