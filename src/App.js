@@ -1,15 +1,19 @@
 import { useState } from "react";
 import Todo from "./Todo";
 
+console.log("Hello world");
+
 function App(props) {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
+  console.log("namer is the best gamer");
 
   const _deleteTodo = (id) => {
     const copy = todoList.concat();
     const filtered = copy.filter((val) => val.id !== id);
     setTodoList(filtered);
+
     console.log("hell oworld");
   };
   const addCompleted = (id) => {
@@ -17,6 +21,7 @@ function App(props) {
     let todoIndex = copy.findIndex((val) => val.id === id);
     copy[todoIndex].checked = true;
     setTodoList(copy);
+
     console.log("added a few changes to main");
   };
 
@@ -24,6 +29,7 @@ function App(props) {
     if (input.length < 1) {
       setError(true);
       return;
+
       console.log("added another");
     }
     setError(false);
@@ -35,6 +41,7 @@ function App(props) {
     });
     setTodoList(copy);
   };
+  console.log("latest changes");
 
   return (
     <div style={styles.mainHeader}>
