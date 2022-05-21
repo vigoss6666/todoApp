@@ -17,6 +17,7 @@ function App(props) {
     let todoIndex = copy.findIndex((val) => val.id === id);
     copy[todoIndex].checked = true;
     setTodoList(copy);
+    console.log("added a few changes to main");
   };
 
   const _addTodo = () => {
