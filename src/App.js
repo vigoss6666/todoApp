@@ -24,6 +24,7 @@ function App(props) {
     if (input.length < 1) {
       setError(true);
       return;
+      console.log("added another");
     }
     setError(false);
     let copy = todoList.concat();
